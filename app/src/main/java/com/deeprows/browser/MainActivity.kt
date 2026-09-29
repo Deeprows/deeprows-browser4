@@ -682,7 +682,7 @@ class MainActivity : AppCompatActivity() {
             loadWithOverviewMode = false
 
             useWideViewPort = false
-            setInitialScale(0)
+this@MainActivity.webView.setInitialScale(0)
 
             mediaPlaybackRequiresUserGesture = false
 
@@ -1740,7 +1740,7 @@ class MainActivity : AppCompatActivity() {
         webView.settings.userAgentString = if (desktopOnly || whatsapp) desktopChrome else mobileChrome
         webView.settings.useWideViewPort = desktopOnly || whatsapp
         webView.settings.loadWithOverviewMode = desktopOnly || whatsapp
-        webView.settings.setInitialScale(0)
+       webView.setInitialScale(0)
 
         if (desktopOnly) {
             webView.settings.textZoom = 100
